@@ -134,6 +134,7 @@ def update_data():
     schedule.filter_out_keyword("Eastbound")
     data = build_arrival_packet(schedule.arrivals)
     return data
-    
-data = update_data()
-send_data_for_duration(IP, PORT, data, DURATION)
+
+if __name__ == "__main__":    
+    data = update_data()
+    send_data_for_duration(IP, PORT, data, DURATION)
