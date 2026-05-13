@@ -138,4 +138,6 @@ def update_data():
 if __name__ == "__main__": 
     while True:    
         data = update_data()
+        if not data:
+            data = "NULL DATA"
         send_data_for_duration(IP, PORT, data, DURATION)
