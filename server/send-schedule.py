@@ -135,6 +135,7 @@ def update_data():
     data = build_arrival_packet(schedule.arrivals)
     return data
 
-if __name__ == "__main__":    
-    data = update_data()
-    send_data_for_duration(IP, PORT, data, DURATION)
+if __name__ == "__main__": 
+    while True:    
+        data = update_data()
+        send_data_for_duration(IP, PORT, data, DURATION)
